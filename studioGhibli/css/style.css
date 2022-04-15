@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../img/spiritBG.jpeg) no-repeat center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1,
+h3 {
+  text-align: center;
+  font-size: 1.7em;
+  color: aliceblue;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  height: 50em;
+}

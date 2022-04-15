@@ -1,0 +1,59 @@
+attempt 1:
+
+document.querySelector("button").addEventListener("click", getMovie);
+
+function getMovie() {
+  const choice = document.querySelector("input").value.toLowerCase();
+  const url = `https://ghibliapi.herokuapp.com/films/`;
+  fetch(url)
+    .then((res) => res.json()) // parse response as JSON
+    .then((data) => {
+      console.log(data);
+
+      document.querySelector("img").src = data.image;
+      document.querySelector("h1").innerText = data.title;
+      document.querySelector("h3").innerText = data.description;
+    })
+    .catch((err) => {
+      console.log(`error ${err}`);
+    });
+}
+
+function idToMovie(movie) {
+  let filmTitles = {
+    "2baf70d1-42bb-4437-b551-e5fed5a87abe": "Castle in the Sky",
+    "12cfb892-aac0-4c5b-94af-521852e46d6a": "Grave of The Fireflies",
+  };
+  return movie in filmTitles ? filmTitles[movie] : movie;
+}
+
+
+ATTEMPT 2:
+
+
+document.querySelector("button").addEventListener("click", getMovie);
+
+function getMovie() {
+  const url = "https://ghibliapi.herokuapp.com/films";
+  const choice = document.querySelector("input").value.toLowerCase();
+
+  fetch(url)
+    .then((res) => res.json()) // parse response as JSON
+    .then((data) => {
+      let idx = data.filter((el) => el.title).indexOf(`${choice}`);
+      if (idx != -1) {
+        id = data[idx].id;
+        return fetch(`${url}/${id}`);
+      } else return;
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      document.querySelector("img").src = data.image;
+      document.querySelector("h1").innerText = data.title;
+      document.querySelector("h3").innerText = data.description;
+    })
+    .catch((err) => {
+      console.log(`error ${err}`);
+    });
+}
