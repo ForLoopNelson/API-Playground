@@ -1,0 +1,35 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img {
+  display: block;
+  margin: 0 auto;
+  height: 500px;
+}
+
+h2,
+h3 {
+  font-size: 40px;
+  border: 1px solid black;
+  background: black;
+  color: white;
+}
+
+p {
+  font-size: 22px;
+  background: gray;
+  color: aliceblue;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
