@@ -3,9 +3,8 @@
 }
 
 body {
-  background: url(../img/spiritBG.jpeg) no-repeat center;
+  background: url(../img/spiritBG.jpeg) no-repeat center/cover;
   height: 100vh;
-  overflow: hidden;
 }
 
 h1,
@@ -18,5 +17,5 @@ h3 {
 img {
   display: block;
   margin: 0 auto;
-  height: 50em;
+  padding: 1em;
 }
