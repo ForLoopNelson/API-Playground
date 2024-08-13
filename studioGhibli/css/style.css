@@ -1,17 +1,35 @@
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   background: url(../img/spiritBG.jpeg) no-repeat center/cover;
+  display: flex; /* Ensure the body takes up full height */
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 380px;
+}
+
+#get {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
 }
 
 h1,
 h3 {
   text-align: center;
-  font-size: 1.7em;
+  font-size: 3.7em;
   color: aliceblue;
+  padding-left: 60px;
 }
 
 img {
